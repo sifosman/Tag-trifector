@@ -15,11 +15,12 @@ export const metadata: Metadata = {
   description: "Log in to your BetterDriver driver portal.",
 };
 
-export default function LoginPage({
+export default async function LoginPage({
   searchParams,
 }: {
-  searchParams: { enrol?: string; returnTo?: string };
+  searchParams: Promise<{ enrol?: string; returnTo?: string }>;
 }) {
+  const params = await searchParams;
   return (
     <div style={{ minHeight: "100vh", background: "#111827", display: "flex", flexDirection: "column" }}>
       <Navigation />
