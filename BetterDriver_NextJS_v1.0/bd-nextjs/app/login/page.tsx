@@ -59,7 +59,7 @@ export default async function LoginPage({
               Log in to BetterDriver
             </h1>
             <p style={{ color: "#9CA3AF", fontSize: "0.9rem" }}>
-              {searchParams.enrol
+              {params.enrol
                 ? `You will be enrolled in your chosen programme after logging in.`
                 : "Access your training, certificates, and professional record."}
             </p>
