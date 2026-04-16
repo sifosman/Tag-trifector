@@ -22,7 +22,7 @@ export default async function RegistryPage({
   searchParams: Promise<{ q?: string }>;
 }) {
   const params = await searchParams;
-  // TODO: Asif — replace with live /api/registry fetch filtered by searchParams.q
+  // TODO: Asif — replace with live /api/registry fetch filtered by params.q
   const results = MOCK_REGISTRY;
 
   return (
@@ -48,7 +48,7 @@ export default async function RegistryPage({
               <input
                 type="search"
                 name="q"
-                defaultValue={searchParams.q ?? ""}
+                defaultValue={params.q ?? ""}
                 placeholder="Search by name, certificate number, or programme…"
                 style={{
                   width: "100%",
