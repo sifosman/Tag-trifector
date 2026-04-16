@@ -16,12 +16,13 @@ export const metadata: Metadata = {
   description: "Enrol in a BetterDriver training programme. Choose your programme and start your professional development today.",
 };
 
-export default function StartPage({
+export default async function StartPage({
   searchParams,
 }: {
-  searchParams: { programme?: string };
+  searchParams: Promise<{ programme?: string }>;
 }) {
-  const selectedProgramme = PROGRAMMES.find((p) => p.slug === searchParams.programme) ?? null;
+  const params = await searchParams;
+  const selectedProgramme = PROGRAMMES.find((p) => p.slug === params.programme) ?? null;
 
   return (
     <div style={{ minHeight: "100vh", background: "#111827", display: "flex", flexDirection: "column" }}>
