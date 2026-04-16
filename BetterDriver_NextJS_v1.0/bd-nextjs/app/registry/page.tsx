@@ -16,11 +16,12 @@ export const metadata: Metadata = {
   description: "Publicly searchable registry of BetterDriver certified professional drivers.",
 };
 
-export default function RegistryPage({
+export default async function RegistryPage({
   searchParams,
 }: {
-  searchParams: { q?: string };
+  searchParams: Promise<{ q?: string }>;
 }) {
+  const params = await searchParams;
   // TODO: Asif — replace with live /api/registry fetch filtered by searchParams.q
   const results = MOCK_REGISTRY;
 
