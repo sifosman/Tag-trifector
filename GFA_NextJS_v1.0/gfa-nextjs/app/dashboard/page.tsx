@@ -21,16 +21,10 @@
  * This file shows the UI shell with mock data for design and layout purposes.
  */
 
-import type { Metadata } from "next";
 import Link from "next/link";
 import { Users, Award, BarChart3, Upload, Download, ChevronRight, CheckCircle2, Clock, AlertCircle } from "lucide-react";
 import { PROGRAMMES, MOCK_EMPLOYEES } from "@/lib/constants";
 import type { Employee, EnrolmentStatus } from "@/types";
-
-export const metadata: Metadata = {
-  title: "Company Dashboard",
-  description: "Manage your company's GreenFreightAcademy enrolments, track progress, and access reports.",
-};
 
 // ─── Mock data ────────────────────────────────────────────────────────────────
 // TODO: Asif to replace with live data from /api/company/metrics and /api/company/employees
